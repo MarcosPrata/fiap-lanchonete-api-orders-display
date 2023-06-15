@@ -33,3 +33,6 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+
+task<Exec>("up") { commandLine("docker-compose", "up") }
