@@ -1,19 +1,39 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
-    id("java")
+    id("org.springframework.boot")
+    id("io.spring.dependency-management")
+    kotlin("jvm")
+    kotlin("plugin.spring")
+    kotlin("plugin.jpa")
 }
 
-group = "com.soat220"
-version = "1.0"
-
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    implementation(project(":domain"))
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.flywaydb:flyway-core")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    runtimeOnly("org.postgresql:postgresql")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.boot:spring-boot-testcontainers")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:postgresql")
 }
 
-tasks.getByName<Test>("test") {
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-Xjsr305=strict")
+        jvmTarget = "17"
+    }
+}
+
+tasks.withType<Test> {
     useJUnitPlatform()
 }
