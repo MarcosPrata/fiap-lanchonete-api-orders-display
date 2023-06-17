@@ -4,8 +4,10 @@ import com.soat220.lanchonete.exception.DomainException
 import com.soat220.lanchonete.product.gateway.CreateProductGateway
 import com.soat220.lanchonete.product.model.Product
 import com.soat220.lanchonete.result.Result
+import javax.inject.Named
 
-class CreateMailType(
+@Named
+class CreateProduct(
     private val createProductGateway: CreateProductGateway
 ) {
     fun execute(product: Product): Result<Product, DomainException> {

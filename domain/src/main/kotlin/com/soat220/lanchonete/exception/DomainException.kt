@@ -17,6 +17,11 @@ open class DomainException(
         ErrorCode.GENERIC_ERROR
     )
 
+    constructor(ex: Exception, errorCode: ErrorCode) : this(
+        message = ex.message ?: ex.localizedMessage,
+        errorCode
+    )
+
     constructor(ex: Throwable) : this(
         message = ex.message ?: ex.localizedMessage,
         ErrorCode.GENERIC_ERROR
