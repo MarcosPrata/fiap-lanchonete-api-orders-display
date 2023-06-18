@@ -6,4 +6,5 @@ enum class ErrorCode(val code: Int) {
     ENTITY_ALREADY_EXISTS_ERROR(3),
     DATABASE_ERROR(4),
     CREATE_PRODUCT_ERROR(5),
+    CREATE_CLIENT_ERROR(6)
 }
