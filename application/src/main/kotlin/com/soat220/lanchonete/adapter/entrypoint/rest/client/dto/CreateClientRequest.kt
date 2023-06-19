@@ -10,7 +10,6 @@ class CreateClientRequest (
 ){
 
     fun toModel() = Client (
-        null,
         name = name,
         cpf = cpf
     )
