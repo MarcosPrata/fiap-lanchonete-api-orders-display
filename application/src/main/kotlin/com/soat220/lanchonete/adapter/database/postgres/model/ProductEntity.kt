@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.product.gateway.postgresdb.model
+package com.soat220.lanchonete.adapter.database.postgres.model
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -7,7 +7,7 @@ import javax.persistence.Id
 import com.soat220.lanchonete.product.model.Product as DomainProduct
 
 @Entity
-class Product(
+class ProductEntity(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
     val name: String,
@@ -19,7 +19,7 @@ class Product(
     )
 
     companion object {
-        fun fromDomain(product: DomainProduct) = Product(
+        fun fromDomain(product: DomainProduct) = ProductEntity(
             null,
             product.name,
             product.price

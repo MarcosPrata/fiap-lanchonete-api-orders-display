@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.product.entrypoint.rest.dto
+package com.soat220.lanchonete.adapter.entrypoint.rest.product.dto
 
 import com.soat220.lanchonete.product.model.Product
 
