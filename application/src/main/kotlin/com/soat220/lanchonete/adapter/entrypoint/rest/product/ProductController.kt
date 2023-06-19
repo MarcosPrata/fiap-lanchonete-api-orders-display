@@ -2,7 +2,7 @@ package com.soat220.lanchonete.adapter.entrypoint.rest.product
 
 import com.soat220.lanchonete.adapter.entrypoint.rest.product.dto.CreateProductRequest
 import com.soat220.lanchonete.port.driver.DomainServiceInterface
-import com.soat220.lanchonete.product.model.Product
+import com.soat220.lanchonete.domain.model.Product
 import com.soat220.lanchonete.result.orThrow
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PostMapping

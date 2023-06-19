@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.client.model
+package com.soat220.lanchonete.domain.model
 
 data class Client(
     var id: Long?,

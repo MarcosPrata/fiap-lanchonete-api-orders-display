@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.product.model
+package com.soat220.lanchonete.domain.model
 
 class Combo (
     val name: String,

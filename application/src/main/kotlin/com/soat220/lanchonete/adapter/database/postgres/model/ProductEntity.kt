@@ -4,7 +4,7 @@ import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-import com.soat220.lanchonete.product.model.Product as DomainProduct
+import com.soat220.lanchonete.domain.model.Product as DomainProduct
 
 @Entity
 class ProductEntity(

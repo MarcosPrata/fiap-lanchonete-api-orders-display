@@ -1,7 +1,6 @@
 package com.soat220.lanchonete.adapter.database.postgres.model
 
-import com.soat220.lanchonete.client.model.Client
-import com.soat220.lanchonete.product.model.Product
+import com.soat220.lanchonete.domain.model.Client
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

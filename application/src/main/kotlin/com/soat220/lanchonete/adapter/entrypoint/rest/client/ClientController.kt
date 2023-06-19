@@ -1,7 +1,7 @@
 package com.soat220.lanchonete.adapter.entrypoint.rest.client
 
 import com.soat220.lanchonete.adapter.entrypoint.rest.client.dto.CreateClientRequest
-import com.soat220.lanchonete.client.model.Client
+import com.soat220.lanchonete.domain.model.Client
 import com.soat220.lanchonete.port.driver.DomainServiceInterface
 import com.soat220.lanchonete.result.orThrow
 import org.springframework.http.HttpStatus

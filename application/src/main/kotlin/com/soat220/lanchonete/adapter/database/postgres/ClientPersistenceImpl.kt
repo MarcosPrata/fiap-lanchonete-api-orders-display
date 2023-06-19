@@ -2,7 +2,7 @@ package com.soat220.lanchonete.adapter.database.postgres
 
 import com.soat220.lanchonete.adapter.database.postgres.model.ClientEntity
 import com.soat220.lanchonete.adapter.database.postgres.repository.ClientRepository
-import com.soat220.lanchonete.client.model.Client
+import com.soat220.lanchonete.domain.model.Client
 import com.soat220.lanchonete.port.driven.DomainPersistenceInterface
 import org.springframework.stereotype.Service
 

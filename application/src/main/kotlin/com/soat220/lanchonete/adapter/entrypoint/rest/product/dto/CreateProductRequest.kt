@@ -1,6 +1,6 @@
 package com.soat220.lanchonete.adapter.entrypoint.rest.product.dto
 
-import com.soat220.lanchonete.product.model.Product
+import com.soat220.lanchonete.domain.model.Product
 
 data class CreateProductRequest(
     val name: String,

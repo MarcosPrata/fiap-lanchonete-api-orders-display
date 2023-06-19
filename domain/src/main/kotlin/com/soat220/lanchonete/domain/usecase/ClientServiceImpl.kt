@@ -1,21 +1,26 @@
-package com.soat220.lanchonete.product.usecase
+package com.soat220.lanchonete.domain.usecase
 
+import com.soat220.lanchonete.domain.model.Client
 import com.soat220.lanchonete.port.driven.DomainPersistenceInterface
 import com.soat220.lanchonete.port.driver.DomainServiceInterface
 import com.soat220.lanchonete.exception.CreateProductException
 import com.soat220.lanchonete.exception.DomainException
 import com.soat220.lanchonete.exception.ErrorCode
-import com.soat220.lanchonete.product.model.Product
 import com.soat220.lanchonete.result.Failure
 import com.soat220.lanchonete.result.Result
 import com.soat220.lanchonete.result.Success
+import javax.inject.Named
 
-class ProductServiceImpl(
-    private val productPersistenceInterface: DomainPersistenceInterface<Product>
-) : DomainServiceInterface<Product> {
-    override fun save(model: Product): Result<Product, DomainException> {
+@Named
+class ClientServiceImpl(
+
+    private val clientPersistenceInterface: DomainPersistenceInterface<Client>
+
+): DomainServiceInterface<Client> {
+
+    override fun save(model: Client): Result<Client, DomainException> {
         try {
-            productPersistenceInterface.save(model)
+            clientPersistenceInterface.save(model)
         } catch (e: Exception) {
             return Failure(
                 CreateProductException(
@@ -27,6 +32,5 @@ class ProductServiceImpl(
 
         return Success(model)
     }
-
 
 }
