@@ -1,6 +1,6 @@
-package com.soat220.lanchonete.product.entrypoint.rest
+package com.soat220.lanchonete.product.driver.rest
 
-import com.soat220.lanchonete.product.entrypoint.rest.dto.CreateProductRequest
+import com.soat220.lanchonete.product.driver.rest.dto.CreateProductRequest
 import com.soat220.lanchonete.product.usecase.CreateProduct
 import com.soat220.lanchonete.result.orThrow
 import org.springframework.http.MediaType
