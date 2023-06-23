@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.adapter.entrypoint.rest
+package com.soat220.lanchonete.rest
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
