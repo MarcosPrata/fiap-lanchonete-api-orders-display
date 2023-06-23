@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.domain.product.model
+package com.soat220.lanchonete.product.model
 
 class Product (
     val id: Long?,
