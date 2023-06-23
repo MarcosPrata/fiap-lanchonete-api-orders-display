@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.postgres.model
+package com.soat220.lanchonete.customer.adapter.postgresdb.model
 
 import com.soat220.lanchonete.customer.model.Customer
 import javax.persistence.*

@@ -1,6 +1,6 @@
-package com.soat220.lanchonete.rest
+package com.soat220.lanchonete.customer.entrypoint.rest
 
-import com.soat220.lanchonete.rest.customer.dto.CreateCustomerRequest
+import com.soat220.lanchonete.customer.entrypoint.rest.dto.CreateCustomerRequest
 import com.soat220.lanchonete.customer.usecase.CreateCustomer
 import com.soat220.lanchonete.customer.usecase.FindCustomerByCpf
 import com.soat220.lanchonete.result.orThrow
