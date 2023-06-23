@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.domain.customer.model
+package com.soat220.lanchonete.customer.model
 
 data class Customer(
     val id: Long?,

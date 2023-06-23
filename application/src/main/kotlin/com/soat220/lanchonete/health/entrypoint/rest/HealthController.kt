@@ -1,4 +1,4 @@
-package com.soat220.lanchonete.rest
+package com.soat220.lanchonete.health.entrypoint.rest
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping

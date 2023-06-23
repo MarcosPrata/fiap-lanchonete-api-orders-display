@@ -1,15 +1,17 @@
 package com.soat220.lanchonete.exception
 
-class CreateCustomerException(
+import com.soat220.lanchonete.order.model.Order
+
+class CreateOrderException(
     message: String
 ) : DomainException(
     message = message,
-    errorCode = ErrorCode.CREATE_CUSTOMER_ERROR
+    errorCode = ErrorCode.CREATE_ORDER_ERROR
 ) {
     constructor(
-        name: String,
+        order: Order?,
         details: List<DomainException>
-    ) : this(name) {
+    ) : this(order.toString()) {
         this.details = details
     }
 }
