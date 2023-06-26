@@ -9,4 +9,6 @@ interface OrderQueuePort {
     fun getNextOrder(): Order?
 
     fun clearQueue()
+
+    fun listAll(): List<Order>
 }

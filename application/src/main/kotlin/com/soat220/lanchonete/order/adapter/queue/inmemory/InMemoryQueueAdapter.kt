@@ -21,4 +21,8 @@ class InMemoryQueueAdapter(): OrderQueuePort {
     override fun clearQueue() {
         orderList.clear()
     }
+
+    override fun listAll(): List<Order> {
+        return orderList.toList()
+    }
 }
