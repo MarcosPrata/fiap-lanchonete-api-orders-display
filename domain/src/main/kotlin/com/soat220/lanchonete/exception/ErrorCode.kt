@@ -7,5 +7,6 @@ enum class ErrorCode(val code: Int) {
     DATABASE_ERROR(4),
     CREATE_PRODUCT_ERROR(5),
     CREATE_CUSTOMER_ERROR(6),
-    CREATE_ORDER_ERROR(7)
+    CREATE_ORDER_ERROR(7),
+    PAYMENT_NOT_APPROVED(8)
 }
