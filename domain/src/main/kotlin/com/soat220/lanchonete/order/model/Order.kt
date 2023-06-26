@@ -11,7 +11,6 @@ class Order(
     var customer: Customer?,
     val products: MutableList<Product>?,
     val orderStatus: OrderStatus?,
-    val totalAmount: Double?,
     val createdAt: LocalDateTime?,
     val updatedAt: LocalDateTime?,
     val notes: String
