@@ -6,5 +6,5 @@ import com.soat220.lanchonete.result.Result
 
 interface FindCustomerByCpfPort {
 
-    fun execute(cpf: String): Result<Customer, DomainException>
+    fun execute(cpf: String?): Result<Customer?, DomainException>
 }

@@ -11,7 +11,7 @@ class FindCustomerByCpf(
     private val findCustomerByCpfPort: FindCustomerByCpfPort
 ) {
 
-    fun execute(cpf: String): Result<Customer, DomainException> {
+    fun execute(cpf: String): Result<Customer?, DomainException> {
         return findCustomerByCpfPort.execute(cpf)
     }
 }

@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface CustomerRepository  : JpaRepository<CustomerEntity, Long> {
 
-    fun findByCpf(cpf: String): CustomerEntity
+    fun findByCpf(cpf: String?): CustomerEntity
 
 }

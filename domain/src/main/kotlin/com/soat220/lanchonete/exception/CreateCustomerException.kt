@@ -7,9 +7,9 @@ class CreateCustomerException(
     errorCode = ErrorCode.CREATE_CUSTOMER_ERROR
 ) {
     constructor(
-        name: String,
+        name: String?,
         details: List<DomainException>
-    ) : this(name) {
+    ) : this(name?: "") {
         this.details = details
     }
 }
