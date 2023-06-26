@@ -6,5 +6,5 @@ import com.soat220.lanchonete.result.Result
 
 interface CreateOrderPort {
 
-    fun execute(customerCpf: String, productsIds: List<Long>, notes: String): Result<Order, DomainException>
+    fun execute(customerCpf: String?, productsIds: List<Long>, notes: String): Result<Order, DomainException>
 }

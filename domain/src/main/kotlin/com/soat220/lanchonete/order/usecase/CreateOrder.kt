@@ -11,7 +11,7 @@ class CreateOrder(
     private val createOrderPort: CreateOrderPort
 ) {
 
-    fun execute(customerCpf: String, productsIds: List<Long>, notes: String): Result<Order, DomainException> {
+    fun execute(customerCpf: String?, productsIds: List<Long>, notes: String): Result<Order, DomainException> {
         return createOrderPort.execute(customerCpf, productsIds, notes)
     }
 
