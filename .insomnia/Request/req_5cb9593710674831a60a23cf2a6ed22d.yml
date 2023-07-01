@@ -1,0 +1,21 @@
+_id: req_5cb9593710674831a60a23cf2a6ed22d
+type: Request
+parentId: fld_71889cd947b546c4a09634003cdd48e6
+modified: 1687711710707
+created: 1687711701124
+url: "{{ _.base_url }}/api/erp/products"
+name: /api/erp/products
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1687711307688
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

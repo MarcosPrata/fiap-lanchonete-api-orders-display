@@ -1,0 +1,30 @@
+_id: req_20fba2303c5445a79a5e884067a7cb95
+type: Request
+parentId: fld_71889cd947b546c4a09634003cdd48e6
+modified: 1688175077388
+created: 1687711585693
+url: "{{ _.base_url }}/api/erp/products"
+name: /api/erp/products
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Produto 1",
+    	"price": 2.75,
+    	"category": "LANCHE"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1687711585693
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

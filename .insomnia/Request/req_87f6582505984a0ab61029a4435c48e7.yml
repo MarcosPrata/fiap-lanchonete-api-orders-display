@@ -1,0 +1,21 @@
+_id: req_87f6582505984a0ab61029a4435c48e7
+type: Request
+parentId: fld_f7cc8d73fbcd4b1cb8befeff69659b2a
+modified: 1687711804896
+created: 1687711804896
+url: "{{ _.base_url }}/api/erp/clients"
+name: /api/erp/clients/{clientId}
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1687711625964
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
