@@ -9,4 +9,27 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: lanchonete
     ports:
-      - 5432:5432
+      - "5432:5432"
+
+  localstack:
+    container_name: "localstack_lanchonete"
+    image: localstack/localstack
+    network_mode: bridge
+    ports:
+      - "${EDGE_PORT-4566}:4566"
+    environment:
+      - SERVICES=sqs
+      - AWS_ACCESS_KEY_ID=dummyaccess
+      - AWS_SECRET_ACCESS_KEY=dummysecret
+      - AWS_DEFAULT_REGION=us-east-1
+      - DEFAULT_REGION=us-east-1
+      - SQS_PROVIDER=elasticmq
+      - LAMBDA_EXECUTOR=docker
+      - NODE_TLS_REJECT_UNAUTHORIZED=0
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - DEBUG=0
+      - LS_LOG=trace
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

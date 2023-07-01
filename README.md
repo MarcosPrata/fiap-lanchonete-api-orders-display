@@ -38,6 +38,16 @@ até o preparo do pedido pela cozinha.
 > 
 > **DB_PASSWORD** { default: postgres }
 
+## 💻 Insomnia Collections
+
+1 — Crie um projeto no insomnia ou selecione um já existente
+
+2 — Crie um documento no projeto selecionado com a opção git clone, faça ‘login’ no git caso necessário e adicione o link do repositório
+
+3 — Após isso as collections já estarão disponíveis na aba debug
+
+<img src="./docs/clonar.gif"/>
+
 ## 🎓 Integrantes / Devs
 
 > Nome: Marcos Henrique Prata Junior 
