@@ -1,0 +1,53 @@
+_id: req_43e716bb4ad0432cac7db21a28651657
+type: Request
+parentId: fld_e1d1d833eeee442f8fbd9e254b82fb3e
+modified: 1688176355570
+created: 1687711029683
+url: "{{ _.base_url }}/api/totem/orders"
+name: /api/totem/orders
+description: |-
+  Envio: 
+
+  	{
+  		"client":{
+  			"clientEmail":"",
+  			"clientCPF":""
+  		},
+  		"ordeItems":[
+  			{
+  				"itemId":"",
+  				"ammount":"",
+  				"note":""
+  			}
+  		]
+  	}
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"client":{
+    		"clientEmail":"",
+    		"clientCPF":""
+    	},
+    	"ordeItems":[
+    		{
+    			"itemId":"",
+    			"ammount":"",
+    			"note":""
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1688060019609.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

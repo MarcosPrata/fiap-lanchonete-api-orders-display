@@ -1,0 +1,21 @@
+_id: req_bed5fd4e8838449a932ad70449084438
+type: Request
+parentId: fld_71889cd947b546c4a09634003cdd48e6
+modified: 1687711825389
+created: 1687711823351
+url: "{{ _.base_url }}/api/erp/products/1"
+name: /api/erp/products/{productId}
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1687711099184.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_d208ba2c739f4f81b50b03f42a88b9fc
+type: Request
+parentId: fld_e1d1d833eeee442f8fbd9e254b82fb3e
+modified: 1688176373374
+created: 1688176339363
+url: "{{ _.base_url }}/api/totem/products"
+name: /api/totem/products
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1687943689634
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
