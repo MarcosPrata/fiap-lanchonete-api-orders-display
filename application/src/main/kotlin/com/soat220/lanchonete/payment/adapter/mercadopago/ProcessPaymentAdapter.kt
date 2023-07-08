@@ -9,6 +9,7 @@ import kotlin.random.Random
 class ProcessPaymentAdapter(): ProcessPaymentPort {
 
     override fun execute(order: Order, totalAmount: Double): Boolean {
-        return Random.nextBoolean()
+        val value = Random.nextInt(0, 100);
+        return value <= 80;
     }
 }
