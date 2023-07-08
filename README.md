@@ -20,13 +20,21 @@ até o preparo do pedido pela cozinha.
 - **Java** 17 ou superior
 
 ## 🚀 Quick Start
-1. Preparando o ambiente
-    - Execute o seguinte comando para subir o container do Postgres.
-        - `gradle up`
+- Rodar usando o Docker: 
+    - Execute o comando para subir os container do Postgres.
+        - `$ docker-compose up`
+    - Ou clique no botão abaixo
+      - `gradle up`
+    - Lembre-se de ter as portas 5432(postgres) e 8080(aplicação) disponíveis!
 
-2. E por fim, rodar o projeto
-    - `gradle bootRun`
-    - ou pela própria IDE, indo no arquivo LanchoneteApplication.kt e clicando no simbolozinho de play.
+
+- Rodar usando o Gradle
+  - Caso rode usando o gradle é necessário iniciar o banco manualmente ou utilizando:
+    - `$ docker-compose run postgres`
+  - Use o comando abaixo:
+      - `gradle bootRun`
+  - Ou pela própria IDE
+    - Indo no arquivo LanchoneteApplication.kt e clicando no simbolozinho de play.
 
 
 ## ⚙️ Variáveis de Ambiente
