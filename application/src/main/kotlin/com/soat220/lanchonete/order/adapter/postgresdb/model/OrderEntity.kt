@@ -12,6 +12,7 @@ import javax.persistence.*
 import kotlin.streams.toList
 
 @Entity
+@Table(name = "ORDERS")
 class OrderEntity(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

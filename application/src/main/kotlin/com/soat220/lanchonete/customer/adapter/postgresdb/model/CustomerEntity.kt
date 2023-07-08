@@ -4,6 +4,7 @@ import com.soat220.lanchonete.customer.model.Customer
 import javax.persistence.*
 
 @Entity
+@Table(name = "CUSTOMER")
 data class CustomerEntity(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,

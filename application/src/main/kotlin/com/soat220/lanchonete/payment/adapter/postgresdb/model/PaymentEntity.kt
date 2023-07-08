@@ -8,6 +8,7 @@ import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
+@Table(name = "PAYMENT")
 class PaymentEntity(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
