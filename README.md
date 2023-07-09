@@ -24,7 +24,7 @@ até o preparo do pedido pela cozinha.
     - Execute o comando para subir os container do Postgres.
         - `$ docker-compose up`
     - Ou clique no botão abaixo
-      - `gradle up`
+      - `gradlew up`
     - Lembre-se de ter as portas 5432(postgres) e 8080(aplicação) disponíveis!
 
 
@@ -32,7 +32,7 @@ até o preparo do pedido pela cozinha.
   - Caso rode usando o gradle é necessário iniciar o banco manualmente ou utilizando:
     - `$ docker-compose run postgres`
   - Use o comando abaixo:
-      - `gradle bootRun`
+      - `gradlew bootRun`
   - Ou pela própria IDE
     - Indo no arquivo LanchoneteApplication.kt e clicando no simbolozinho de play.
 
@@ -69,8 +69,8 @@ até o preparo do pedido pela cozinha.
 >
 > Matrícula: RM349544
 >
-> [![Linkedin](https://img.shields.io/badge/Linkedin-0E76A8.svg?style=for-the-badge&logo=Linkedin&logoColor=white)]()
-> [![GitHub](https://img.shields.io/badge/GitHub-333.svg?style=for-the-badge&logo=GitHub&logoColor=white)]()
+> [![Linkedin](https://img.shields.io/badge/Linkedin-0E76A8.svg?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/moreira-dev/)
+> [![GitHub](https://img.shields.io/badge/GitHub-333.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/MarcosPotato)
 
 
 > Nome: Marcelo Gonçalves de Barros
