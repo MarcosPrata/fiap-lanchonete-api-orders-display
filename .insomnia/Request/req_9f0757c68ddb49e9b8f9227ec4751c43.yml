@@ -1,9 +1,9 @@
 _id: req_9f0757c68ddb49e9b8f9227ec4751c43
 type: Request
 parentId: fld_71889cd947b546c4a09634003cdd48e6
-modified: 1687711729774
+modified: 1688844110449
 created: 1687711720010
-url: "{{ _.base_url }}/api/erp/products/1"
+url: "{{ _.base_url }}/api/erp/products/2"
 name: /api/erp/products/{productId}
 description: ""
 method: GET

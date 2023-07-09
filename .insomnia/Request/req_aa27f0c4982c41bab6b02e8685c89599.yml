@@ -1,0 +1,21 @@
+_id: req_aa27f0c4982c41bab6b02e8685c89599
+type: Request
+parentId: fld_6253a28ffc2447768019b7b3c1cd9b1e
+modified: 1688939144496
+created: 1688938028178
+url: "{{ _.base_url }}/api/kitchen/orders/1/finish"
+name: /api/kitchen/orders/{orderId}/finish
+description: ""
+method: PATCH
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1688288177621.3125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

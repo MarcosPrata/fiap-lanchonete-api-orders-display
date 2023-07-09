@@ -1,17 +1,17 @@
-_id: req_f16885f5cf984e14ab9f70278ef396a5
+_id: req_2bae0d4b98ae4f48af90f59b2eca3d6c
 type: Request
-parentId: fld_04e313b7c9fc4774b65787c3507b0458
-modified: 1688922085396
-created: 1688176800269
-url: "{{ _.base_url }}/api/orders-display/orders"
-name: /api/orders-display/orders
+parentId: fld_6253a28ffc2447768019b7b3c1cd9b1e
+modified: 1688937973947
+created: 1688937242485
+url: "{{ _.base_url }}/api/kitchen/orders/preparing"
+name: /api/kitchen/orders/preparing
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1688176800269
+metaSortKey: -1688311568822.9688
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,10 +1,10 @@
 _id: req_87f6582505984a0ab61029a4435c48e7
 type: Request
 parentId: fld_f7cc8d73fbcd4b1cb8befeff69659b2a
-modified: 1687711804896
+modified: 1688936068242
 created: 1687711804896
-url: "{{ _.base_url }}/api/erp/clients"
-name: /api/erp/clients/{clientId}
+url: "{{ _.base_url }}/api/erp/customers/2"
+name: /api/erp/customers/{customerId}
 description: ""
 method: GET
 body: {}

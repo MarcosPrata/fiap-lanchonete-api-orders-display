@@ -1,10 +1,10 @@
 _id: req_43e716bb4ad0432cac7db21a28651657
 type: Request
 parentId: fld_e1d1d833eeee442f8fbd9e254b82fb3e
-modified: 1688176355570
+modified: 1688941906755
 created: 1687711029683
-url: "{{ _.base_url }}/api/totem/orders"
-name: /api/totem/orders
+url: "{{ _.base_url }}/api/customer-totem/orders"
+name: /api/customer-totem/orders
 description: |-
   Envio: 
 
@@ -26,15 +26,16 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"client":{
-    		"clientEmail":"",
-    		"clientCPF":""
+    	"notes":"Sanduiche sem cebola por favor",
+    	"customer": {
+    		"name": "Eu",
+    		"email": "eu@email.com",
+    		"cpf": "000.000.000-03"
     	},
-    	"ordeItems":[
+    	"orderItems": [
     		{
-    			"itemId":"",
-    			"amount":"",
-    			"note":""
+    			"productId": 1,
+    			"amount": 1
     		}
     	]
     }
@@ -43,7 +44,7 @@ headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1688060019609.5
+metaSortKey: -1688001854571.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
