@@ -1,17 +1,17 @@
-_id: req_2112dadac9f14918afb41daa384ed6a3
+_id: req_b3bf45f7d7c347c0b02f929b4e2f0dab
 type: Request
 parentId: fld_6253a28ffc2447768019b7b3c1cd9b1e
-modified: 1687711876424
-created: 1687711876424
-url: ""
-name: New Request
+modified: 1688939627831
+created: 1688938015170
+url: "{{ _.base_url }}/api/kitchen/orders/3/prepare"
+name: /api/kitchen/orders/{orderId}/prepare
 description: ""
-method: GET
+method: PATCH
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1687711876424
+metaSortKey: -1688293375666.125
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

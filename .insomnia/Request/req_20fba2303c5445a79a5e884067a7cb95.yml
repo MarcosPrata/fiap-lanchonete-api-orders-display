@@ -1,7 +1,7 @@
 _id: req_20fba2303c5445a79a5e884067a7cb95
 type: Request
 parentId: fld_71889cd947b546c4a09634003cdd48e6
-modified: 1688175077388
+modified: 1688933513972
 created: 1687711585693
 url: "{{ _.base_url }}/api/erp/products"
 name: /api/erp/products
@@ -11,9 +11,13 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"name": "Produto 1",
-    	"price": 2.75,
-    	"category": "LANCHE"
+    	"name": "Sanduiche de Ovo",
+    	"description": "Pão e Ovo",
+    	"category": "SANDWICH",
+    	"price": 7.5,
+    	"imageUrls": [
+    		"Link"
+    	]
     }
 parameters: []
 headers:
