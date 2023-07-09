@@ -26,9 +26,13 @@ CREATE TABLE orderItem (
 INSERT INTO "order_table" (id, customer_id, status, notes) VALUES (1, 1, 1, 'Favor não colocar sal');
 INSERT INTO "order_table" (id, customer_id, status, notes) VALUES (2, 2, 0, 'Entregar no orfanato de gothan city');
 
-INSERT INTO orderItem (id, order_id, product_id, amount) VALUES (1, 1, 2, 2 );
+ALTER SEQUENCE order_table_id_seq RESTART WITH 3;
 
-INSERT INTO orderItem (id, order_id, product_id, amount) VALUES (2, 2, 1, 500);
-INSERT INTO orderItem (id, order_id, product_id, amount) VALUES (3, 2, 2, 500);
-INSERT INTO orderItem (id, order_id, product_id, amount) VALUES (4, 2, 3, 500);
-INSERT INTO orderItem (id, order_id, product_id, amount) VALUES (5, 2, 4, 500);
+INSERT INTO orderitem (id, order_id, product_id, amount) VALUES (1, 1, 2, 2 );
+
+INSERT INTO orderitem (id, order_id, product_id, amount) VALUES (2, 2, 1, 500);
+INSERT INTO orderitem (id, order_id, product_id, amount) VALUES (3, 2, 2, 500);
+INSERT INTO orderitem (id, order_id, product_id, amount) VALUES (4, 2, 3, 500);
+INSERT INTO orderitem (id, order_id, product_id, amount) VALUES (5, 2, 4, 500);
+
+ALTER SEQUENCE orderitem_id_seq RESTART WITH 6;
