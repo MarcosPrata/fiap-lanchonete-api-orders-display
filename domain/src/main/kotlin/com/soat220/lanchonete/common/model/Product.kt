@@ -1,8 +1,12 @@
 package com.soat220.lanchonete.common.model
 
-class Product (
+import com.soat220.lanchonete.common.model.enums.Category
+
+class Product(
     val id: Long? = null,
     val name: String,
+    val description: String,
+    val category: Category,
     val price: Double,
-    val category: Category
+    val imageUrls: List<String>
 )
