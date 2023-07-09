@@ -10,7 +10,9 @@ import com.soat220.lanchonete.common.result.Result
 import com.soat220.lanchonete.common.result.getOrNull
 import com.soat220.lanchonete.customerTotem.port.CreateCustomerPort
 import com.soat220.lanchonete.customerTotem.port.CreateOrderPort
+import com.soat220.lanchonete.customerTotem.port.CreatePaymentPort
 import com.soat220.lanchonete.customerTotem.port.FindCustomerByCpfPort
+import com.soat220.lanchonete.customerTotem.port.ProcessPaymentPort
 import com.soat220.lanchonete.customerTotem.usecase.dto.CreateOrder
 import com.soat220.lanchonete.erp.port.FindProductByIdPort
 import java.time.LocalDateTime
@@ -23,6 +25,8 @@ class CreateOrder(
     private val findProductByIdPort: FindProductByIdPort,
     private val createOrderPort: CreateOrderPort,
     private val createCustomerPort: CreateCustomerPort,
+    private val createPaymentPort: CreatePaymentPort,
+    private val processPaymentPort: ProcessPaymentPort,
 ) {
     fun execute(createOrder: CreateOrder): Result<Order, DomainException> {
         val orderItems = createOrder.orderItems.map {
@@ -35,8 +39,12 @@ class CreateOrder(
             )
         }.toMutableList()
 
+        val customer = getCustomer(createOrder)
+
+        verifyPayment(orderItems)
+
         val order = Order(
-            customer = getCustomer(createOrder),
+            customer = customer,
             notes = createOrder.notes ?: "",
             orderItems = orderItems,
             orderStatus = OrderStatus.RECEIVED,
@@ -67,5 +75,21 @@ class CreateOrder(
         }
 
         return customer
+    }
+
+    private fun verifyPayment(orderItems: MutableList<OrderItem>) {
+        val totalAmount = orderItems
+            .map { it.product.price * it.amount }
+            .reduce { acc, price -> acc + price }
+
+//        val paymentStatus =
+//            if (processPaymentPort.execute(order, totalAmount)) PaymentStatus.APPROVED
+//            else PaymentStatus.DECLINED
+//
+//        createPaymentPort.execute(order, paymentStatus, totalAmount).orThrow()
+//
+//        if (paymentStatus != PaymentStatus.APPROVED) {
+//            throw PaymentNotApprovedException("Payment not approved", ErrorCode.PAYMENT_NOT_APPROVED)
+//        }
     }
 }

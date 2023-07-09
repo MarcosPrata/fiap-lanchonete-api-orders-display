@@ -13,7 +13,7 @@ import javax.persistence.Table
 @Entity
 @Table(name = "product_image")
 class ProductImage(
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
 
     @ManyToOne(fetch = FetchType.LAZY)

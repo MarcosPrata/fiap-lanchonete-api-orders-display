@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service
 class FindCustomerByCpfAdapter(
     private val customerRepository: CustomerRepository
 ) : FindCustomerByCpfPort {
-
     override fun execute(cpf: String?): Result<Customer?, DomainException> {
         try {
             if (nonNull(cpf)) {
@@ -27,6 +26,5 @@ class FindCustomerByCpfAdapter(
                 DomainException(e, ErrorCode.DATABASE_ERROR)
             )
         }
-
     }
 }

@@ -13,7 +13,7 @@ import com.soat220.lanchonete.common.model.Product as DomainProduct
 @Entity
 @Table(name = "product")
 class Product(
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
     private val name: String,
     private val description: String,
