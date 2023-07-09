@@ -1,7 +1,7 @@
 package com.soat220.lanchonete.config
 
-import com.soat220.lanchonete.exception.DomainException
-import com.soat220.lanchonete.exception.ErrorCode
+import com.soat220.lanchonete.common.exception.DomainException
+import com.soat220.lanchonete.common.exception.ErrorCode
 import java.time.LocalDateTime
 import org.springframework.http.HttpStatus
 

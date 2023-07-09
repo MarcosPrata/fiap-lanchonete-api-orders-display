@@ -1,8 +1,8 @@
 package com.soat220.lanchonete.config
 
-import com.soat220.lanchonete.exception.AlreadyExistsException
-import com.soat220.lanchonete.exception.DomainException
-import com.soat220.lanchonete.exception.NotFoundException
+import com.soat220.lanchonete.common.exception.AlreadyExistsException
+import com.soat220.lanchonete.common.exception.DomainException
+import com.soat220.lanchonete.common.exception.NotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

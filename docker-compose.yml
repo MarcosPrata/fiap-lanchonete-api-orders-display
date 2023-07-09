@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  app:
+    container_name: "lanchonete_api"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/lanchonete
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
   postgres:
     image: postgres
     restart: unless-stopped
@@ -9,4 +21,4 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: lanchonete
     ports:
-      - 5432:5432
+      - "5432:5432"

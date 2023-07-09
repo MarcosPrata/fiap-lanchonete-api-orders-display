@@ -20,13 +20,21 @@ até o preparo do pedido pela cozinha.
 - **Java** 17 ou superior
 
 ## 🚀 Quick Start
-1. Preparando o ambiente
-    - Execute o seguinte comando para subir o container do Postgres.
-        - `gradle up`
+- Rodar usando o Docker: 
+    - Execute o comando para subir os container do Postgres.
+        - `$ docker-compose up`
+    - Ou clique no botão abaixo
+      - `gradle up`
+    - Lembre-se de ter as portas 5432(postgres) e 8080(aplicação) disponíveis!
 
-2. E por fim, rodar o projeto
-    - `gradle bootRun`
-    - ou pela própria IDE, indo no arquivo LanchoneteApplication.kt e clicando no simbolozinho de play.
+
+- Rodar usando o Gradle
+  - Caso rode usando o gradle é necessário iniciar o banco manualmente ou utilizando:
+    - `$ docker-compose run postgres`
+  - Use o comando abaixo:
+      - `gradle bootRun`
+  - Ou pela própria IDE
+    - Indo no arquivo LanchoneteApplication.kt e clicando no simbolozinho de play.
 
 
 ## ⚙️ Variáveis de Ambiente
@@ -38,6 +46,16 @@ até o preparo do pedido pela cozinha.
 > 
 > **DB_PASSWORD** { default: postgres }
 
+## 💻 Insomnia Collections
+
+1 — Crie um projeto no insomnia ou selecione um já existente
+
+2 — Crie um documento no projeto selecionado com a opção git clone, faça ‘login’ no git caso necessário e adicione o link do repositório
+
+3 — Após isso as collections já estarão disponíveis na aba debug
+
+<img src="./docs/clonar.gif"/>
+
 ## 🎓 Integrantes / Devs
 
 > Nome: Marcos Henrique Prata Junior 
@@ -47,25 +65,25 @@ até o preparo do pedido pela cozinha.
 > [![Linkedin](https://img.shields.io/badge/Linkedin-0E76A8.svg?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/marcos-henrique-prata-junior/)
 > [![GitHub](https://img.shields.io/badge/GitHub-333.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/MarcosPrata)
 
-> Nome: Marcos...
+> Nome: Marcos Moreira
 >
-> Matrícula: RM...
->
-> [![Linkedin](https://img.shields.io/badge/Linkedin-0E76A8.svg?style=for-the-badge&logo=Linkedin&logoColor=white)]()
-> [![GitHub](https://img.shields.io/badge/GitHub-333.svg?style=for-the-badge&logo=GitHub&logoColor=white)]()
-
-
-> Nome: Marcelo...
->
-> Matrícula: RM...
+> Matrícula: RM349544
 >
 > [![Linkedin](https://img.shields.io/badge/Linkedin-0E76A8.svg?style=for-the-badge&logo=Linkedin&logoColor=white)]()
 > [![GitHub](https://img.shields.io/badge/GitHub-333.svg?style=for-the-badge&logo=GitHub&logoColor=white)]()
 
 
-> Nome: Henrique...
+> Nome: Marcelo Gonçalves de Barros
 >
-> Matrícula: RM...
+> Matrícula: RM349535
+>
+> [![Linkedin](https://img.shields.io/badge/Linkedin-0E76A8.svg?style=for-the-badge&logo=Linkedin&logoColor=white)]()
+> [![GitHub](https://img.shields.io/badge/GitHub-333.svg?style=for-the-badge&logo=GitHub&logoColor=white)]()
+
+
+> Nome: Henrique de Paula Leite
+>
+> Matrícula: RM350046
 >
 > [![Linkedin](https://img.shields.io/badge/Linkedin-0E76A8.svg?style=for-the-badge&logo=Linkedin&logoColor=white)]()
 > [![GitHub](https://img.shields.io/badge/GitHub-333.svg?style=for-the-badge&logo=GitHub&logoColor=white)]()

@@ -16,7 +16,7 @@ description: |-
   		"ordeItems":[
   			{
   				"itemId":"",
-  				"ammount":"",
+  				"amount":"",
   				"note":""
   			}
   		]
@@ -36,10 +36,6 @@ body:
     		{
     			"productId": 1,
     			"amount": 1
-    		},
-    		{
-    			"productId": 3,
-    			"amount": 4
     		}
     	]
     }
