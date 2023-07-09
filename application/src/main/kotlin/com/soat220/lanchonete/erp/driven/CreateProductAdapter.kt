@@ -4,8 +4,8 @@ import com.soat220.lanchonete.erp.exception.CreateProductException
 import com.soat220.lanchonete.common.exception.DomainException
 import com.soat220.lanchonete.common.exception.ErrorCode
 import com.soat220.lanchonete.erp.port.CreateProductPort
-import com.soat220.lanchonete.erp.driven.postgresdb.ProductRepository
-import com.soat220.lanchonete.erp.driven.postgresdb.model.Product
+import com.soat220.lanchonete.common.driven.postgresdb.ProductRepository
+import com.soat220.lanchonete.common.driven.postgresdb.model.Product
 import com.soat220.lanchonete.common.result.Failure
 import com.soat220.lanchonete.common.result.Result
 import com.soat220.lanchonete.common.result.Success

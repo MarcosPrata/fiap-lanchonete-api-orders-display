@@ -5,7 +5,7 @@ import com.soat220.lanchonete.common.exception.ErrorCode
 import com.soat220.lanchonete.common.result.Failure
 import com.soat220.lanchonete.common.result.Result
 import com.soat220.lanchonete.common.result.Success
-import com.soat220.lanchonete.erp.driven.postgresdb.ProductRepository
+import com.soat220.lanchonete.common.driven.postgresdb.ProductRepository
 import com.soat220.lanchonete.erp.exception.FindProductByIdException
 import com.soat220.lanchonete.erp.port.FindProductByIdPort
 import org.springframework.stereotype.Service
