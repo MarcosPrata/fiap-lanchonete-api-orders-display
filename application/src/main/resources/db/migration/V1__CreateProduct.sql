@@ -4,6 +4,7 @@ CREATE TABLE product (
     description varchar(200) NOT NULL,
 	category varchar(25) NOT NULL,
 	price float NOT NULL,
+	deleted bool NOT NULL default(false),
 
 	CONSTRAINT product_pkey PRIMARY KEY (id)
 );
