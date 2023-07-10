@@ -1,7 +1,7 @@
 _id: req_ca523d61f14b410bba66a91ada794d73
 type: Request
 parentId: fld_71889cd947b546c4a09634003cdd48e6
-modified: 1688933687869
+modified: 1688948753373
 created: 1687711834644
 url: "{{ _.base_url }}/api/erp/products/2"
 name: /api/erp/products/{productId}
@@ -15,6 +15,7 @@ body:
     	"description": "1, 2, 3 ...",
     	"category": "SIDE_DISH",
     	"price": 5.9,
+    	"deleted": false,
     	"imageUrls": [
     		"https://www.sabornamesa.com.br/media/k2/items/cache/377829b055e89e3afb894e7528a10996_XL.jpg"
     	]
