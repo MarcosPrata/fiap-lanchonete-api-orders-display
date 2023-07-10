@@ -8,5 +8,6 @@ class Product(
     val description: String,
     val category: Category,
     val price: Double,
-    val imageUrls: List<String>
+    val imageUrls: List<String>,
+    val deleted: Boolean
 )

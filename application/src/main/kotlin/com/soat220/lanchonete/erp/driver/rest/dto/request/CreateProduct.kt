@@ -15,6 +15,7 @@ data class CreateProduct(
         description = description,
         category = category,
         price = price,
-        imageUrls = imageUrls
+        imageUrls = imageUrls,
+        deleted = false
     )
 }

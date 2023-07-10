@@ -8,7 +8,8 @@ data class UpdateProduct(
     val description: String,
     val price: Double,
     val category: Category,
-    val imageUrls: List<String>
+    val imageUrls: List<String>,
+    val deleted: Boolean
 ) {
     fun toDomain(productId: Long) = Product(
         id = productId,
@@ -16,6 +17,7 @@ data class UpdateProduct(
         description = description,
         category = category,
         price = price,
-        imageUrls = imageUrls
+        imageUrls = imageUrls,
+        deleted = deleted
     )
 }
