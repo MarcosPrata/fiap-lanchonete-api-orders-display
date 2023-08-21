@@ -5,7 +5,7 @@ metadata:
   labels:
     app: lanchonete-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: lanchonete-deployment
