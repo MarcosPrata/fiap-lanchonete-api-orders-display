@@ -44,14 +44,14 @@ até o preparo do pedido pela cozinha.
         - `$ kubectl config use-context docker-desktop`
 - Subir o postgres da aplicação
     - Execute os seguintes comandos para subir
-        -`$ kubectl apply -f kubernetes/postgres/postgres-secrets.yaml`
-        -`$ kubectl apply -f kubernetes/postgres/postgres-config.yaml`
-        -`$ kubectl apply -f kubernetes/postgres/postgres-deployment.yaml`
-        -`$ kubectl apply -f kubernetes/postgres/postgres-svc.yaml`
+        - `$ kubectl apply -f kubernetes/postgres/postgres-secrets.yaml`
+        - `$ kubectl apply -f kubernetes/postgres/postgres-config.yaml`
+        - `$ kubectl apply -f kubernetes/postgres/postgres-deployment.yaml`
+        - `$ kubectl apply -f kubernetes/postgres/postgres-svc.yaml`
 - Subir a instancia da aplicação
     - Execute os seguintes comandos para subir
-        -`$ kubectl apply -f kubernetes/lanchonete-deployment.yaml`
-        -`$ kubectl apply -f kubernetes/lanchonete-svc.yaml`
+        - `$ kubectl apply -f kubernetes/lanchonete-deployment.yaml`
+        - `$ kubectl apply -f kubernetes/lanchonete-svc.yaml`
 - Agora para visualizar os pods execute o seguinte comando:
     - `$ kubectl get pods`
 
