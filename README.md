@@ -18,6 +18,7 @@ até o preparo do pedido pela cozinha.
 - **Docker**
 - **Gradle** versão 6.6.1
 - **Java** 17 ou superior
+- **Kubectl** versão 5.0.1 ou superior
 
 ## 🚀 Quick Start
 - Rodar usando o Docker: 
@@ -27,7 +28,6 @@ até o preparo do pedido pela cozinha.
       - `gradlew up`
     - Lembre-se de ter as portas 5432(postgres) e 8080(aplicação) disponíveis!
 
-
 - Rodar usando o Gradle
   - Caso rode usando o gradle é necessário iniciar o banco manualmente ou utilizando:
     - `$ docker-compose run postgres`
@@ -36,6 +36,24 @@ até o preparo do pedido pela cozinha.
   - Ou pela própria IDE
     - Indo no arquivo LanchoneteApplication.kt e clicando no simbolozinho de play.
 
+## ☁️ Deploy usando kubernetes
+- Habilite a opção de kubernetes no docker
+    - Usando o docker desktop vá em configurações => kubernetes => enable hubernetes
+    - Execute os seguintes comando para vincular o docker
+        - `$ kubectl config get-contexts`
+        - `$ kubectl config use-context docker-desktop`
+- Subir o postgres da aplicação
+    - Execute os seguintes comandos para subir
+        -`$ kubectl apply -f kubernetes/postgres/postgres-secrets.yaml`
+        -`$ kubectl apply -f kubernetes/postgres/postgres-config.yaml`
+        -`$ kubectl apply -f kubernetes/postgres/postgres-deployment.yaml`
+        -`$ kubectl apply -f kubernetes/postgres/postgres-svc.yaml`
+- Subir a instancia da aplicação
+    - Execute os seguintes comandos para subir
+        -`$ kubectl apply -f kubernetes/lanchonete-deployment.yaml`
+        -`$ kubectl apply -f kubernetes/lanchonete-svc.yaml`
+- Agora para visualizar os pods execute o seguinte comando:
+    - `$ kubectl get pods`
 
 ## ⚙️ Variáveis de Ambiente
 > **ACTIVE_PROFILE** { default: develop }
