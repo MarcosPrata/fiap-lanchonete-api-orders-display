@@ -12,7 +12,7 @@ jobs:
     with:
       aws_region: "us-east-1"
       app_env: prod
-      ecr_repository: lanchonete-prd
+      ecr_repository: lanchonete-prd-repository
       ecs_cluster: cluster
       ecs_service: service
       ecs_task_definition: .aws/task-definition.json
