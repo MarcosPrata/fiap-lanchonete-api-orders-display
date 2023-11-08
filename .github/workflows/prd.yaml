@@ -15,7 +15,7 @@ jobs:
       ecr_repository: lanchonete-prd-repository
       ecs_cluster: cluster
       ecs_service: service
-      ecs_task_definition: .aws/task-definition.json
+      ecs_task_definition: .aws/task-definition-prd.json
       container_name: lanchonete
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
