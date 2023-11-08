@@ -1,4 +1,4 @@
-name: Build Lanchonete project
+name: ci
 
 on:
   push:

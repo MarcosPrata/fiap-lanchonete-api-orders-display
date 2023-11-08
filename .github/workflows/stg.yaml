@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-production:
-    uses: ./.github/workflows/main.yaml
+    uses: ./.github/workflows/cd.yaml
     with:
       aws_region: "us-east-1"
       app_env: stg
