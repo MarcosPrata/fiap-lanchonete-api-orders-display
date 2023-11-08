@@ -1,4 +1,4 @@
-name: 📦🚀 [Production] Lanchonete API
+name: 📦🚀 [Staging] Lanchonete API
 
 on:
   push:
@@ -11,12 +11,12 @@ jobs:
     uses: ./.github/workflows/main.yaml
     with:
       aws_region: "us-east-1"
-      app_env: prod
-      ecr_repository: lanchonete-prd
+      app_env: stg
+      ecr_repository: lanchonete-stg
       ecs_cluster: cluster
       ecs_service: service
       ecs_task_definition: .aws/task-definition.json
-      container_name: lanchonete-api-prd
+      container_name: lanchonete-api-stg
     secrets:
       CI_AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       CI_AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

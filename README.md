@@ -16,6 +16,8 @@ até o preparo do pedido pela cozinha.
 
 Os seguintes repositórios também fazem parte desse projeto:
 
+> [fiap-lanchonete-terraform](https://github.com/MarcosPrata/fiap-lanchonete-terraform) - Reponsável por provisionar a infra na AWS.
+
 > [fiap-lanchonete-api-gateway](https://github.com/MarcosPrata/fiap-lanchonete-api-gateway) - API Gateway que funciona como bff para o serviço core.
 
 > [fiap-lanchonete-lambda-authorizer](https://github.com/MarcosPrata/fiap-lanchonete-lambda-authorizer) - Reponsável por autenticar e autorizar as chamadas requests dos usuários.
