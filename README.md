@@ -1,4 +1,4 @@
-# Lanchonete
+# fiap-lanchonete-api
 
 ![Turma](https://img.shields.io/badge/👨🏻‍🏫_Turma-SOAT2-blue?style=for-the-badge)
 ![Equipe](https://img.shields.io/badge/🧑🏻‍💻_equipe-20-blue?style=for-the-badge)
@@ -11,6 +11,15 @@
 
 API Responsável pela gestão de pedidos de uma lanchonete, envolvendo desde a realização do pedido pelo cliente
 até o preparo do pedido pela cozinha.
+
+![Diagrama da arquitetura do projeto](./docs/arquitetura.png)
+
+Os seguintes repositórios também fazem parte desse projeto:
+
+> [fiap-lanchonete-api-gateway](https://github.com/MarcosPrata/fiap-lanchonete-api-gateway) - API Gateway que funciona como bff para o serviço core.
+
+> [fiap-lanchonete-lambda-authorizer](https://github.com/MarcosPrata/fiap-lanchonete-lambda-authorizer) - Reponsável por autenticar e autorizar as chamadas requests dos usuários.
+
 
 ## 🚦Pre-requisitos
 

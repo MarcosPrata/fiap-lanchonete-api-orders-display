@@ -1,0 +1,22 @@
+name: 📦🚀 Deploy Lanchonete API Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-production:
+    uses: ./.github/workflows/main.yaml
+    with:
+      aws_region: "us-east-1"
+      app_env: prod
+      ecr_repository: lanchonete-prd
+      ecs_cluster: cluster
+      ecs_service: service
+      ecs_task_definition: .aws/task-definition.json
+      container_name: lanchonete-api-prd
+    secrets:
+      CI_AWS_ACCESS_KEY_ID: ${{ secrets.CI_PRD_AWS_ACCESS_KEY_ID }}
+      CI_AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_PRD_AWS_SECRET_ACCESS_KEY }}
