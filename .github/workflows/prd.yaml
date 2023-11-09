@@ -11,10 +11,10 @@ jobs:
     uses: ./.github/workflows/cd.yaml
     with:
       aws_region: "us-east-1"
-      app_env: prod
+      app_env: prd
       ecr_repository: lanchonete-prd-repository
-      ecs_cluster: cluster
-      ecs_service: service
+      ecs_cluster: lanchonete-prd-cluster
+      ecs_service: lanchonete-prd-service
       ecs_task_definition: .aws/task-definition-prd.json
       container_name: lanchonete
     secrets:
