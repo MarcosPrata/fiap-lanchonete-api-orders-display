@@ -9,6 +9,9 @@ on:
       app_env:
         required: true
         type: string
+      cluster_name:
+        required: true
+        type: string
       ecr_repository:
         required: true
         type: string
@@ -39,8 +42,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: ${{ inputs.app_env }}
-      AWS_REGION: us-east-1
-      CLUSTER_NAME: demo
 
     steps:
     - name: Checkout
@@ -72,18 +73,18 @@ jobs:
       with:
         command: "apply -f kubernetes/postgres/"
       env:
-        EKS_CLUSTER: ${{ environment.CLUSTER_NAME }}
+        EKS_CLUSTER: ${{ inputs.cluster_name }}
 
     - name: Run application deploy
       uses: nikosch86/github-action-eks-kubectl@main
       with:
         command: "apply -f kubernetes/"
       env:
-        EKS_CLUSTER: ${{ environment.CLUSTER_NAME }}
+        EKS_CLUSTER: ${{ inputs.cluster_name }}
 
     - name: Run get loadbalancer service
       uses: nikosch86/github-action-eks-kubectl@main
       with:
         command: "get svc lanchonete-lb-svc"
       env:
-        EKS_CLUSTER: ${{ environment.CLUSTER_NAME }}
+        EKS_CLUSTER: ${{ inputs.cluster_name }}

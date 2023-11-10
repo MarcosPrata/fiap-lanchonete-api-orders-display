@@ -13,6 +13,7 @@ jobs:
       aws_region: "us-east-1"
       app_env: stg
       ecr_repository: lanchonete-stg-repository
+      cluster_name: demo
       ecs_cluster: lanchonete-stg-cluster
       ecs_service: lanchonete-stg-service
       ecs_task_definition: .aws/task-definition-stg.json
