@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: lanchonete
-          image: 912118864993.dkr.ecr.us-east-1.amazonaws.com/lanchonete-stg-repository:latest
+          image: henriquedpaula/fiap-techchallenge:v1
           ports:
             - containerPort: 8080
           env:
