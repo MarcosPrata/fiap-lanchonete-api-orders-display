@@ -16,20 +16,20 @@ spec:
     spec:
       containers:
         - name: lanchonete
-          image: henriquedpaula/fiap-techchallenge:v1
+          image: 912118864993.dkr.ecr.us-east-1.amazonaws.com/lanchonete-stg-repository:latest
           ports:
             - containerPort: 8080
           env:
-            - name: POSTGRES_USER
+            - name: DB_USER
               valueFrom:
                 secretKeyRef:
                   name: postgres-secrets
-                  key: POSTGRES_USER
-            - name: POSTGRES_PASSWORD
+                  key: DB_USER
+            - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: postgres-secrets
-                  key: POSTGRES_PASSWORD
+                  key: DB_PASSWORD
             - name: DB_URL
               valueFrom:
                 configMapKeyRef:

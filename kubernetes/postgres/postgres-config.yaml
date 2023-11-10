@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: postgres-config
 data:
-  POSTGRES_DB: lanchonete
-  DB_URL: jdbc:postgresql://postgres-service:5432/lanchonete
+  POSTGRES_DB: postgres
+  DB_URL: jdbc:postgresql://lanchonete-stg-db.clwl3tbiuplh.us-east-1.rds.amazonaws.com:5432/postgres
