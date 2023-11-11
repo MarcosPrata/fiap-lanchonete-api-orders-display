@@ -18,8 +18,6 @@ Os seguintes repositórios também fazem parte desse projeto:
 
 > [fiap-lanchonete-terraform](https://github.com/MarcosPrata/fiap-lanchonete-terraform) - Reponsável por provisionar a infra na AWS.
 
-> [fiap-lanchonete-api-gateway](https://github.com/MarcosPrata/fiap-lanchonete-api-gateway) - API Gateway que funciona como bff para o serviço core.
-
 > [fiap-lanchonete-lambda-authorizer](https://github.com/MarcosPrata/fiap-lanchonete-lambda-authorizer) - Reponsável por autenticar e autorizar as chamadas requests dos usuários.
 
 
@@ -37,7 +35,7 @@ Os seguintes repositórios também fazem parte desse projeto:
         - `$ docker-compose up`
     - Ou clique no botão abaixo
       - `gradlew up`
-    - Lembre-se de ter as portas 5432(postgres) e 8080(aplicação) disponíveis!
+    - Lembre-se de ter as portas 5432(postgres) e 80(aplicação) disponíveis!
 
 - Rodar usando o Gradle
   - Caso rode usando o gradle é necessário iniciar o banco manualmente ou utilizando:

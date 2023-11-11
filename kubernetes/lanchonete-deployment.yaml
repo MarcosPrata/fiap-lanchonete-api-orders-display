@@ -18,7 +18,7 @@ spec:
         - name: lanchonete
           image: henriquedpaula/fiap-techchallenge:v1
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           env:
             - name: DB_USER
               valueFrom:

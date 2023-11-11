@@ -7,8 +7,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-production:
-    uses: ./.github/workflows/cd.yaml
+  ci:
+    uses: ./.github/workflows/ci.yaml
+
+  cd:
+    uses: ./.github/workflows/ecs_cd.yaml
     with:
       aws_region: "us-east-1"
       app_env: prd
@@ -16,7 +19,7 @@ jobs:
       ecs_cluster: lanchonete-prd-cluster
       ecs_service: lanchonete-prd-service
       ecs_task_definition: .aws/task-definition-prd.json
-      container_name: lanchonete
+      container_name: lanchonete-prd
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

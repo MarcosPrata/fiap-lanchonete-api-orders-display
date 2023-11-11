@@ -5,7 +5,7 @@ modified: 1687711135305
 created: 1687711075849
 name: DEV
 data:
-  base_url: http://localhost:8080
+  base_url: http://localhost:80
 dataPropertyOrder:
   "&":
     - base_url

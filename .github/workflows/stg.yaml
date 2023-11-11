@@ -7,17 +7,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-production:
-    uses: ./.github/workflows/cd.yaml
+  ci:
+    uses: ./.github/workflows/ci.yaml
+
+  cd:
+    uses: ./.github/workflows/ecs_cd.yaml
+    needs: ci
     with:
       aws_region: "us-east-1"
       app_env: stg
       ecr_repository: lanchonete-stg-repository
-      cluster_name: demo
       ecs_cluster: lanchonete-stg-cluster
       ecs_service: lanchonete-stg-service
       ecs_task_definition: .aws/task-definition-stg.json
-      container_name: lanchonete
+      container_name: lanchonete-stg
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

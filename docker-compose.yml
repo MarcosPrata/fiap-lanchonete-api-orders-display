@@ -9,7 +9,7 @@ services:
     environment:
       DB_URL: jdbc:postgresql://postgres:5432/lanchonete
     ports:
-      - "8080:8080"
+      - "80:80"
     depends_on:
       - postgres
 

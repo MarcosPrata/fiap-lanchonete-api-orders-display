@@ -5,6 +5,6 @@ RUN gradle build --no-daemon
 
 FROM gradle:7.6.1-jdk17
 COPY --from=build /home/application/build/libs/*.jar /app/
-EXPOSE 8080
+EXPOSE 80
 WORKDIR /app
 ENTRYPOINT ["java", "-jar", "application-1.0.jar"]
