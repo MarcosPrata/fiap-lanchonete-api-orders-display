@@ -12,6 +12,7 @@ jobs:
 
   cd:
     uses: ./.github/workflows/ecs_cd.yaml
+    needs: ci
     with:
       aws_region: "us-east-1"
       app_env: prd
