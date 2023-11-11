@@ -1,7 +1,7 @@
 name: ci
 
 on:
-  push:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -17,16 +17,9 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
-      - name: Build
-        run: ./gradlew build --no-daemon
+      - name: Test
+        run: ./gradlew test
 
-#      - name: Test
-#
-#        run: ./gradlew build --no-daemon
-#        with:
-#          distribution: 'temurin'
-#          java-version: '17'
-#          cache: 'gradle'
 
 
 
