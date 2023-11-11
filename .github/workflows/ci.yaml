@@ -10,13 +10,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Build
+      - name: Setup Java
         uses: actions/setup-java@v3
-        run: ./gradlew build --no-daemon
         with:
           distribution: 'temurin'
           java-version: '17'
           cache: 'gradle'
+
+      - name: Build
+        run: ./gradlew build --no-daemon
 
 #      - name: Test
 #
