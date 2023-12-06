@@ -1,0 +1,35 @@
+server:
+  port: 8082
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+spring:
+  jpa:
+    database: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+  database:
+    driverClassName: org.h2.Driver
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL;INIT=CREATE SCHEMA IF NOT EXISTS public;DATABASE_TO_UPPER=false
+
+  flyway:
+    locations: filesystem:src/main/resources/db/migration
+    enabled: true
+    baseline-on-migrate: true
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
