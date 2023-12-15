@@ -11,4 +11,4 @@ CREATE TABLE customer (
 INSERT INTO customer (id, "cpf", "name", "email") VALUES (1, '000.000.000-01', 'Galvão Bueno', 'amoney@gmail.com');
 INSERT INTO customer (id, "cpf", "name", "email") VALUES (2, '000.000.000-02', 'Batman', 'bruce@gmail.com');
 
---ALTER SEQUENCE customer_id_seq RESTART WITH 3;
+ALTER SEQUENCE customer_id_seq RESTART WITH 3;
