@@ -19,6 +19,7 @@ dependencies {
     testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
     testImplementation("org.mockito:mockito-inline:5.2.0")
     testImplementation("io.mockk:mockk:1.13.4")
+    testImplementation("org.assertj:assertj-core:3.7.0")
 }
 
 tasks.withType<KotlinCompile> {
