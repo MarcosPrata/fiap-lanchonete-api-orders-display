@@ -28,6 +28,8 @@ dependencies {
     testImplementation("com.h2database:h2")
     testImplementation("io.rest-assured:rest-assured:3.0.0")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation("org.instancio:instancio-junit:3.6.0")
+
 }
 
 tasks.withType<KotlinCompile> {

@@ -4,6 +4,7 @@ import com.soat220.lanchonete.common.driven.postgresdb.CustomerRepository
 import com.soat220.lanchonete.common.driven.postgresdb.model.Customer
 import com.soat220.lanchonete.common.result.Failure
 import com.soat220.lanchonete.common.result.Success
+import com.soat220.lanchonete.customerTotem.driven.support.CustomerSupport
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -23,20 +24,21 @@ class FindCustomerByCpfAdapterIT(
 
     @Test
     fun shouldFindCustomerByCpfSuccessful() {
-        val customer = CustomerHelper.createCustomer(3L, "cpf");
+        val customer = CustomerSupport.createCustomerWithCpf(3L, "1234567890");
+
         this.customerRepository.save(Customer.fromDomain(customer));
 
-        assertThat(this.findCustomerByCpfAdapter.execute("cpf"))
+        assertThat(this.findCustomerByCpfAdapter.execute("1234567890"))
             .isEqualTo(Success(customer));
     }
 
     @Test
     fun shouldNotFindCustomerWhenNonExistingCpf() {
-        val customer = CustomerHelper.createCustomer(4L, "cpf");
+        val customer = CustomerSupport.createCustomerWithCpf(4L, "1234567890");
 
         this.customerRepository.save(Customer.fromDomain(customer));
 
-        val result = this.findCustomerByCpfAdapter.execute("novo cpf")
+        val result = this.findCustomerByCpfAdapter.execute("1234566")
 
         assertThat(result).isExactlyInstanceOf(Failure::class.java)
         assertThat(result).withFailMessage { "Result must not be null!" }
