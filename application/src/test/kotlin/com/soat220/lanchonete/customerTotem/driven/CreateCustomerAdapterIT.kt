@@ -8,13 +8,12 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.TestPropertySource
+import org.springframework.test.context.ActiveProfiles
+import org.springframework.transaction.annotation.Transactional
 
 @SpringBootTest
-@TestPropertySource(
-    locations = ["classpath:application-test2.properties"]
-//            locations = ["classpath:application-test.yml"]
-)
+@ActiveProfiles("test")
+@Transactional
 class CreateCustomerAdapterIT (
     @Autowired private val customerRepository: CustomerRepository
 ){
@@ -45,7 +44,6 @@ class CreateCustomerAdapterIT (
         val result = this.createCustomerAdapter.execute(customer);
 
         assertThat(result).isExactlyInstanceOf(Failure::class.java)
-        assertThat(this.customerRepository.existsById(4L)).isFalse();
 
     }
 

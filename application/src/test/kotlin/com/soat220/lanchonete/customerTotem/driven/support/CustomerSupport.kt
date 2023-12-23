@@ -8,7 +8,7 @@ import org.instancio.Select.field
 class CustomerSupport {
 
     companion object {
-        fun createCustomerWithCpf(id: Long, cpf: String?): Customer {
+        fun createCustomerWithCpf(id: Long?, cpf: String?): Customer {
             return Instancio.of(Customer::class.java)
                 .set(field("id"), id)
                 .set(field("cpf"), cpf)
