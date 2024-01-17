@@ -1,0 +1,9 @@
+{
+  "name": "product test",
+  "description": "description",
+  "price": 10.5,
+  "category": 1,
+  "imageUrls": [
+    "http://imagemteste.com"
+  ]
+}
