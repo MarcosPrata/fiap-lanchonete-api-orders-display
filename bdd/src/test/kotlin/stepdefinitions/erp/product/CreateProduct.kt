@@ -2,9 +2,11 @@ package stepdefinitions.erp.product
 
 import common.RestAssuredHelper
 import common.RestAssuredHelper.Companion.body
+import common.RestAssuredHelper.Companion.currentId
 import common.RestAssuredHelper.Companion.response
 import io.cucumber.java8.En
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 
 class CreateProduct : En {
 
@@ -24,7 +26,10 @@ class CreateProduct : En {
 
         Then("Should create product") {
             assertEquals(200, response.statusCode)
+            assertNotNull(response.jsonPath().get("id"))
+
+            // utilizado para os demais testes
+            currentId = response.jsonPath().get("id")
         }
     }
-
 }

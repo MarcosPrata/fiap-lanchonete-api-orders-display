@@ -8,6 +8,7 @@ class RestAssuredHelper {
 
     companion object {
 
+        var currentId: Int? = null;
         var body: String? = null;
         lateinit var response: Response;
 
@@ -33,5 +34,21 @@ class RestAssuredHelper {
                     .get(url)
         }
 
+        fun doPut(url: String, body: String?): Response {
+            return RestAssured
+                .given()
+                    .body(body)
+                    .contentType(ContentType.JSON)
+                .`when`()
+                    .put(url)
+        }
+
+        fun doDelete(url: String): Response {
+            return RestAssured
+                .given()
+                    .contentType(ContentType.JSON)
+                .`when`()
+                    .delete(url)
+        }
     }
 }
