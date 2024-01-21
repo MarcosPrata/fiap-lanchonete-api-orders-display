@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.`when`
 
-class FindProductAdapterTest {
+class FindProductsAdapterTest {
 
     private val productRepository: ProductRepository = mock(ProductRepository::class.java)
     private val findProductsAdapter: FindProductsAdapter = FindProductsAdapter(productRepository)
