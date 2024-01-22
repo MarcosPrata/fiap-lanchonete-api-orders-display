@@ -18,7 +18,12 @@ class FindCustomerByCpfAdapter(
     override fun execute(cpf: String?): Result<Customer?, DomainException> {
         try {
             if (nonNull(cpf)) {
-                return Success(customerRepository.findByCpf(cpf).toDomain())
+
+                val customer = customerRepository.findByCpf(cpf)
+
+                if (nonNull(customer)) {
+                    return Success(customer.toDomain())
+                }
             }
             return Success(null)
         } catch (e: Exception) {

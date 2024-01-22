@@ -3,7 +3,7 @@ package com.soat220.lanchonete.erp.driven
 import com.soat220.lanchonete.common.driven.postgresdb.CustomerRepository
 import com.soat220.lanchonete.common.result.Failure
 import com.soat220.lanchonete.common.result.Success
-import com.soat220.lanchonete.erp.driven.helper.CustomerHelper.Companion.createCustomer
+import com.soat220.lanchonete.customerTotem.driven.helper.CustomerHelper.Companion.createCustomer
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito
