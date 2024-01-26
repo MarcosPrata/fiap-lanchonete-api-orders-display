@@ -18,7 +18,8 @@ dependencies {
     testImplementation("org.junit.vintage:junit-vintage-engine:5.9.2")
     testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
     testImplementation("org.mockito:mockito-inline:5.2.0")
-    testImplementation("io.mockk:mockk:1.13.4")
+    testImplementation("org.assertj:assertj-core:3.6.1")
+
 }
 
 tasks.withType<KotlinCompile> {
