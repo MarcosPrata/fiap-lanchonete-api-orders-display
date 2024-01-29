@@ -20,7 +20,7 @@ import javax.inject.Named
 import com.soat220.lanchonete.common.model.Customer as DomainCustomer
 
 @Named
-class CreateOrder(
+open class CreateOrder(
     private val findCustomerByCpfPort: FindCustomerByCpfPort,
     private val findProductByIdPort: FindProductByIdPort,
     private val createOrderPort: CreateOrderPort,
@@ -28,7 +28,7 @@ class CreateOrder(
     private val createPaymentPort: CreatePaymentPort,
     private val processPaymentPort: ProcessPaymentPort,
 ) {
-    fun execute(createOrder: CreateOrder): Result<Order, DomainException> {
+    open fun execute(createOrder: CreateOrder): Result<Order, DomainException> {
         val orderItems = createOrder.orderItems.map {
             val product = findProductByIdPort.execute(it.productId).getOrNull()
                 ?: throw NotFoundException(Product::class.java)

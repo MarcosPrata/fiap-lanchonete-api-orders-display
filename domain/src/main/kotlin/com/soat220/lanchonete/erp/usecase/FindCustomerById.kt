@@ -7,11 +7,11 @@ import com.soat220.lanchonete.erp.port.FindCustomerByIdPort
 import javax.inject.Named
 
 @Named
-class FindCustomerById(
+open class FindCustomerById(
     private val findCustomerByIdPort: FindCustomerByIdPort
 ) {
 
-    fun execute(customerId: Long): Result<Customer?, DomainException> {
+    open fun execute(customerId: Long): Result<Customer?, DomainException> {
         return findCustomerByIdPort.execute(customerId)
     }
 }

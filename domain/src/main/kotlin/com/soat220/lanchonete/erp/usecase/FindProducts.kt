@@ -7,10 +7,10 @@ import com.soat220.lanchonete.erp.port.FindProductsPort
 import javax.inject.Named
 
 @Named
-class FindProducts(
+open class FindProducts(
     private val findProductsPort: FindProductsPort
 ) {
-    fun execute(): Result<List<Product>, DomainException> {
+    open fun execute(): Result<List<Product>, DomainException> {
         return findProductsPort.execute()
     }
 }

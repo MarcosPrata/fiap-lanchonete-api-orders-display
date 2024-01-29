@@ -6,6 +6,7 @@ plugins {
     kotlin("jvm")
     kotlin("plugin.spring")
     kotlin("plugin.jpa")
+    id("jacoco")
 }
 
 repositories {
@@ -22,10 +23,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     runtimeOnly("org.postgresql:postgresql")
-
+    testImplementation("org.junit.jupiter:junit-jupiter:5.5.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.boot:spring-boot-test-autoconfigure")
-}
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
@@ -36,4 +37,29 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport) // relatório é sempre gerado após os testes
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+        csv.required.set(false)
+
+        val jacocoXmlReportPath = file("$buildDir/reports/jacoco/test/jacocoTestReport.xml")
+        xml.destination = jacocoXmlReportPath
+
+        val jacocoHTMLReportPath = file("$buildDir/reports/jacoco/html")
+        html.destination = jacocoHTMLReportPath
+
+        doLast {
+            if (!jacocoXmlReportPath.exists()) {
+                throw GradleException("JaCoCo XML report not found at: $jacocoXmlReportPath")
+            }
+
+            println("JaCoCo XML report generated at: $jacocoXmlReportPath")
+        }
+    }
 }

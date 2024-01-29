@@ -8,10 +8,10 @@ import com.soat220.lanchonete.kitchen.port.SetOrderStatusPort
 import javax.inject.Named
 
 @Named
-class FinishOrder(
+open class FinishOrder(
     private val setOrderStatusPort: SetOrderStatusPort
 ) {
-    fun execute(orderId: Long): Result<Order, DomainException> {
+    open fun execute(orderId: Long): Result<Order, DomainException> {
         return setOrderStatusPort.execute(orderId, OrderStatus.READY)
     }
 }

@@ -13,5 +13,5 @@ class DisplayController(
     private val findAllOrders: FindAllOrders,
 ) {
     @GetMapping("/orders")
-    fun findProducts() = findAllOrders.execute().orThrow()
+    fun findOrders() = findAllOrders.execute().orThrow()
 }

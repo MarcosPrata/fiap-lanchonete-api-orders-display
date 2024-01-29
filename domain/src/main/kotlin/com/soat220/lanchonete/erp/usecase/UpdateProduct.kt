@@ -7,10 +7,10 @@ import com.soat220.lanchonete.erp.port.UpdateProductPort
 import javax.inject.Named
 
 @Named
-class UpdateProduct(
+open class UpdateProduct(
     private val updateProductPort: UpdateProductPort
 ) {
-    fun execute(product: Product): Result<Product, DomainException> {
+    open fun execute(product: Product): Result<Product, DomainException> {
         return updateProductPort.execute(product)
     }
 }

@@ -8,10 +8,10 @@ import com.soat220.lanchonete.kitchen.port.FindOrdersByStatusPort
 import javax.inject.Named
 
 @Named
-class FindReceivedOrders(
+open class FindReceivedOrders(
     private val findOrdersByStatusPort: FindOrdersByStatusPort
 ) {
-    fun execute(): Result<List<Order>, DomainException> {
+    open fun execute(): Result<List<Order>, DomainException> {
         return findOrdersByStatusPort.execute(OrderStatus.RECEIVED)
     }
 }

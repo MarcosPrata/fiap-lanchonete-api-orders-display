@@ -10,11 +10,11 @@ import com.soat220.lanchonete.ordersDisplay.port.FindAllOrdersPort
 import javax.inject.Named
 
 @Named
-class FindAllOrders(
+open class FindAllOrders(
     private val findAllOrdersPort: FindAllOrdersPort
 ) {
 
-    fun execute(): Result<List<Order>, DomainException> {
+    open fun execute(): Result<List<Order>, DomainException> {
         val orders = findAllOrdersPort.execute()
             .orThrow()
             .filter { it.orderStatus != OrderStatus.COMPLETED }
