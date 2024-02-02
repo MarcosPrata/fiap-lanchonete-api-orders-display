@@ -1,13 +1,7 @@
 name: ci
 
 on:
-  push:
-    branches:
-      - 'main'
-  pull_request:
-    branches:
-      - 'main'
-    types: [opened, synchronize, reopened]
+  workflow_call:
 
 jobs:
   test:
@@ -20,8 +14,8 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '17'
           cache: 'gradle'
 
       - name: Test
-        run: gradle test
+        run: ./gradlew test
