@@ -1,11 +1,24 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+ext {
+    kotlin_version = "1.7.10"
+}
+
 plugins {
     id("org.springframework.boot")
     id("io.spring.dependency-management")
+    id("org.sonarqube") version "4.1.0.3113"
     kotlin("jvm")
     kotlin("plugin.spring")
     kotlin("plugin.jpa")
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "fiap-postech-tech-challenge_tech-challenge")
+        property("sonar.organization", "fiap-postech-tech-challenge")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
 }
 
 repositories {
@@ -31,6 +44,8 @@ dependencies {
     testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
     testImplementation("org.mockito:mockito-inline:4.3.1")
     testImplementation("io.mockk:mockk:1.13.4")
+
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 }
 
 tasks.withType<KotlinCompile> {
