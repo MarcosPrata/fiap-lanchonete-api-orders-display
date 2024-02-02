@@ -9,6 +9,8 @@ import com.soat220.lanchonete.common.result.orThrow
 import com.soat220.lanchonete.ordersDisplay.port.FindAllOrdersPort
 import javax.inject.Named
 
+//Hello World
+
 @Named
 class FindAllOrders(
     private val findAllOrdersPort: FindAllOrdersPort
