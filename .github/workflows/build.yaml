@@ -40,7 +40,7 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: gradle build sonar --info
+        run: gradle build --warning-mode=all sonar --info
 
       - name: Test
         run: gradle test
